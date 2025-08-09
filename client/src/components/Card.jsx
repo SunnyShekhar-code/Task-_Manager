@@ -41,7 +41,7 @@ const Card = ({flag,toggleState,data,setupdatedData}) => {
 
     const handlecompleteTask=async (id)=>{  
       try{
-        const response=await axios.put(`http://localhost:1000/api/v2/update-complete-task/${id}`,
+        const response=await axios.put(`https://task-manager-65ay.onrender.com/api/v2/update-complete-task/${id}`,
           {},
           {headers}
         );
@@ -53,7 +53,7 @@ const Card = ({flag,toggleState,data,setupdatedData}) => {
 
     const handleImportant=async (id)=>{
       try{
-        const response=await axios.put(`http://localhost:1000/api/v2/update-imp-task/${id}`,
+        const response=await axios.put(`https://task-manager-65ay.onrender.com/api/v2/update-imp-task/${id}`,
           {},
           {headers}
         );
@@ -66,7 +66,7 @@ const Card = ({flag,toggleState,data,setupdatedData}) => {
 
     const deleteTask=async (id)=>{
       try{
-        const response=await axios.delete(`http://localhost:1000/api/v2/delete-task/${id}`,
+        const response=await axios.delete(`https://task-manager-65ay.onrender.com/api/v2/delete-task/${id}`,
           {headers}
         );
         alert(response?.data?.message);

@@ -23,7 +23,8 @@ const Login = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          "http://localhost:1000/api/v1/log-in",
+          "https://task-manager-65ay.onrender.com/api/v1/log-in",
+          // https://task-manager-65ay.onrender.com
           Data
         );
         setData({ username: "", password: "" });

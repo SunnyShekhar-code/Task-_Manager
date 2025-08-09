@@ -19,7 +19,7 @@ const InputData = ({toggleState,UpdatedData ,setupdatedData}) => {
     if(Data.title==="" || Data.desc===""){
       alert("All fields are required");
     }else{
-      const response=await axios.post("http://localhost:1000/api/v2/create-task",Data,{headers});
+      const response=await axios.post("https://task-manager-65ay.onrender.com/api/v2/create-task",Data,{headers});
       alert(response.data.message);
       setData({title:"", desc:""});
       toggleState();
@@ -34,7 +34,7 @@ const InputData = ({toggleState,UpdatedData ,setupdatedData}) => {
       if(Data.title==="" || Data.desc===""){
         alert("All fields are required");
       }else{
-        const response=await axios.put(`http://localhost:1000/api/v2/update-task/${UpdatedData.id}`,Data,{headers});
+        const response=await axios.put(`https://task-manager-65ay.onrender.com/api/v2/update-task/${UpdatedData.id}`,Data,{headers});
         alert(response.data.message);
         toggleState();
         setupdatedData({id:"",title:"",desc:""});

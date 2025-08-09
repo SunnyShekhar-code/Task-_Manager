@@ -48,7 +48,7 @@ const Sidebar=()=>{
     };
 
     const fetch=async ()=>{
-      const response= await axios.get("http://localhost:1000/api/v2/get-all-tasks",{headers});
+      const response= await axios.get("https://task-manager-65ay.onrender.com/api/v2/get-all-tasks",{headers});
       // console.log(response);
       setData(response?.data?.data);
     }

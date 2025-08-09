@@ -11,12 +11,14 @@ const Importanttask = () => {
 
   const fetch = async () => {
     const response = await axios.get(
-      "http://localhost:1000/api/v2/get-imp-tasks",
+      "https://task-manager-65ay.onrender.com/api/v2/get-imp-tasks",
+      
       { headers }
     );
     setData(response?.data?.data);
   };
 
+  // "http://localhost:1000/api/v2/get-imp-tasks",
   useEffect(() => {
     fetch();
   });

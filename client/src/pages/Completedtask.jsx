@@ -10,9 +10,10 @@ const Completedtask = () => {
       };
     
       const fetch=async ()=>{
-        const response= await axios.get("http://localhost:1000/api/v2/get-completed-tasks",{headers});
+        const response= await axios.get("https://task-manager-65ay.onrender.com/api/v2/get-completed-tasks",{headers});
         setData(response?.data?.data);
         // console.log(Data);
+        // "http://localhost:1000/api/v2/get-imp-tasks",
       }
       
       useEffect(()=>{
