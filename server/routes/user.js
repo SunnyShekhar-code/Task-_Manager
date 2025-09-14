@@ -37,6 +37,7 @@ router.post("/sign-in",async(req,res)=>{
 
 router.post("/log-in",async(req,res)=>{
     try{
+        console.log("first")
         const {username,email, password}=req.body;
     const existingUser=await User.findOne({username});
     
@@ -56,7 +57,8 @@ router.post("/log-in",async(req,res)=>{
     })
 
     }catch(err){
-        res.status(400).json({message:"Error from login block"});
+        console.log(err);
+        res.status(400).json({message:"Error from login block hello"});
     }
 })
 

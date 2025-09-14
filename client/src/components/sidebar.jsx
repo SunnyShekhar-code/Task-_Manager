@@ -42,10 +42,16 @@ const Sidebar=()=>{
       navigate("/login");
     }
 
-    const headers={
-      id:localStorage.getItem("id"),
-      authorisation:`bearer ${localStorage.getItem("token")}`,
-    };
+    // const headers={
+    //   id:localStorage.getItem("id"),
+    //   authorisation:`bearer ${localStorage.getItem("token")}`,
+    // };
+
+    const headers = {
+  id: localStorage.getItem("id"), 
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+};
+
 
     const fetch=async ()=>{
       const response= await axios.get("https://task-manager-65ay.onrender.com/api/v2/get-all-tasks",{headers});

@@ -67,7 +67,7 @@ const Login = () => {
 
         <div className="w-full flex items-center justify-between">
           <button
-            className="bg-blue-400 font-semibold text-black px-3 py-2 rounded"
+            className="bg-blue-400 hover:bg-blue-500 font-semibold text-black px-3 py-2 rounded"
             onClick={submit}
           >
             Login

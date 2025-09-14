@@ -4,10 +4,16 @@ import axios from "axios";
 
 const Importanttask = () => {
   const [Data, setData] = useState();
+  // const headers = {
+  //   id: localStorage.getItem("id"),
+  //   authorisation: `bearer ${localStorage.getItem("token")}`,
+  // };
+
   const headers = {
-    id: localStorage.getItem("id"),
-    authorisation: `bearer ${localStorage.getItem("token")}`,
-  };
+  id: localStorage.getItem("id"), 
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+};
+
 
   const fetch = async () => {
     const response = await axios.get(

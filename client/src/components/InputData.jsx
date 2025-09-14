@@ -5,10 +5,16 @@ import { RxCross1 } from "react-icons/rx";
 const InputData = ({toggleState,UpdatedData ,setupdatedData}) => {
   const [Data,setData]=useState({title:"",desc:""});
 
-  const headers={
-    id:localStorage.getItem("id"),
-    authorisation:`bearer ${localStorage.getItem("token")}`,
-  };
+  // const headers={
+  //   id:localStorage.getItem("id"),
+  //   authorisation:`bearer ${localStorage.getItem("token")}`,
+  // };
+
+  const headers = {
+  id: localStorage.getItem("id"), 
+  Authorization: `Bearer ${localStorage.getItem("token")}`,
+};
+
 
   const change=(e)=>{
     const {name, value}=e.target;
@@ -25,6 +31,8 @@ const InputData = ({toggleState,UpdatedData ,setupdatedData}) => {
       toggleState();
     }
   }catch(err){
+    console.log(err.response?.data);
+
     console.log(err.message);
   }
   }
